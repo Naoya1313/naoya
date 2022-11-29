@@ -5,6 +5,8 @@ on:
     paths: '*.tex'
     tags: '*-ver.*'
 
+
+
 jobs:
   build:
     name: Build
@@ -13,7 +15,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: Build docker image
-        uses: Naoya1313/github/.github/actions/latex@master
+        uses: Naoya1313/naoya/.github/actions/latex@master
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
       - name: Upload artifact
