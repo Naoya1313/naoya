@@ -1,10 +1,10 @@
 %ulinej.sty v1.00			by 21M
 % This file is in the public domain.
 %%%
-% Usage: \ulinej{Ê¸¾Ï}
-% ¤¿¤À¤·¶õÇò¡¢±ÑÃ±¸ì¡¢¥³¥Þ¥ó¥É¤È°ú¿ô¤Ê¤É(°ìÈÌ¤Ë¡¢¤½¤ÎÃæ¤¬Ê¬ÃÇ¤µ¤ì¤¿¤ê
-% ²þ¹Ô¤¬Æþ¤Ã¤¿¤ê¤·¤Æ¤Ïº¤¤ë¤â¤Î)¤Ï¡Ö{ }¡×¤Ç³ç¤é¤Ê¤±¤ì¤Ð¤Ê¤é¤Ê¤¤¡£
-% Îã \ulinej{¤¢¤¤¤¦¤¨¤ª{$\cal B$}¤«¤­¤¯¤±¤³{foo}{ }{bar}}
+% Usage: \ulinej{Ê¸ï¿½ï¿½}
+% ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò¡¢±ï¿½Ã±ï¿½ì¡¢ï¿½ï¿½ï¿½Þ¥ï¿½É¤È°ï¿½ï¿½ï¿½ï¿½Ê¤ï¿½(ï¿½ï¿½ï¿½Ì¤Ë¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¤¬Ê¬ï¿½Ç¤ï¿½ï¿½ì¤¿ï¿½ï¿½
+% ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½Ã¤ï¿½ï¿½ê¤·ï¿½Æ¤Ïºï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½Ï¡ï¿½{ }ï¿½×¤Ç³ï¿½ï¿½Ê¤ï¿½ï¿½ï¿½Ð¤Ê¤ï¿½Ê¤ï¿½ï¿½ï¿½
+% ï¿½ï¿½ \ulinej{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½{$\cal B$}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½{foo}{ }{bar}}
 %%%
 \ifnum\the\catcode`\@=11 \let\ul@insty\relax \else \makeatletter \fi
 %-----------
@@ -12,11 +12,11 @@
 \newdimen\ul@skipwidth \newdimen\ul@depth \newdimen\ul@height
 \def\ulinej#1{%
 	\begingroup \ul@curpos=0\setbox\ul@tmpbox=\hbox{#1}%
-	\ul@depth=\the\dp\ul@tmpbox \advance\ul@depth by0.16em%·è¤áÂÇ¤Á
+	\ul@depth=\the\dp\ul@tmpbox \advance\ul@depth by0.16em%ï¿½ï¿½ï¿½ï¿½Ç¤ï¿½
 	\@ulinej#1\@enduline \endgroup
 }
 \def\@putulj#1#2{%
-	\ul@height=-#1\advance\ul@height by0.4pt%·è¤áÂÇ¤Á
+	\ul@height=-#1\advance\ul@height by0.4pt%ï¿½ï¿½ï¿½ï¿½Ç¤ï¿½
 	\ifdim#2>0pt \@@putulj{#1}{#2}\else \ifdim#2<0pt\hskip#2\fi\fi%
 }
 \def\@@putulj#1#2{\leaders\hrule depth#1 height\ul@height \hskip#2\relax}
