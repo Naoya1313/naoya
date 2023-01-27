@@ -52,13 +52,13 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/watch.jpg}
+    \includegraphics[width=5cm]{images/chapter3/watch.jpg}
     \caption{利用したスマートウォッチ,TicWatchE3}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/watchreserch.png}
+    \includegraphics[width=14cm]{images/chapter3/watchreserch.png}
     \caption{スマートウォッチの普及率}
 \end{figure}
 
@@ -76,17 +76,12 @@ csv file nameに保存したいファイル名を記入し記録開始ボタン�
 心拍数を取得中の画面を図に示す．心拍数の計測が終了したらCSV出力のボタンを押し計測を終了する．
 取得した心拍データはCSVファイルとなり生体データを管理するサーバへとアップロードされる．
 
-\begin{figure}[H]
+\begin{figure}[tbh]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/tokei_real.png}
+    \includegraphics[width=15cm]{images/chapter3/watchgazou.png}
     \caption{心拍数取得画面}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{images/chapter3/csv.png}
-    \caption{心拍数取得中画面}
-\end{figure}
 
 \subsection{心拍データの観察}
 
@@ -101,19 +96,19 @@ csv file nameに保存したいファイル名を記入し記録開始ボタン�
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/gurafu2.png}
+    \includegraphics[width=14cm]{images/chapter3/gurafu2.png}
     \caption{キングコングを視聴した時の1人目心拍数のグラフ}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/gurafu.png}
+    \includegraphics[width=14cm]{images/chapter3/gurafu.png}
     \caption{キングコングを視聴した時の2人目心拍数のグラフ}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/gurafu1.png}
+    \includegraphics[width=14cm]{images/chapter3/gurafu1.png}
     \caption{キングコングを視聴した時の3人目心拍数のグラフ}
 \end{figure}
 
@@ -136,26 +131,43 @@ effectlevelで表示するエフェクトを決定する．effectlevelは表�
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/haisyutusyori.png}
+    \includegraphics[width=14cm]{images/chapter3/haisyutusyori.png}
     \caption{心拍数上昇箇所の抽出処理}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{images/chapter3/propaty.png}
-    \caption{心拍データのモデルの型定義}
-\end{figure}
+
+\begin{table}[htb]
+    \begin{center}
+        \caption{心拍データのモデルの型定義}
+        
+        \label{model}
+            \begin{tabular}{|c|c|c|} \hline
+            	プロパティ & 型 & 説明  \\ \hline \hline
+                from & float & 心拍数が閾値を超えた時間 \\ \hline
+                to & float & 心拍数が閾値を下回った時間 \\ \hline
+                effectlevel & int & 表示するエフェクトのレベル \\ \hline
+            \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[htb]
+    \begin{center}
+        \caption{閾値設定}
+        
+        \label{effectlevel}
+            \begin{tabular}{|c|c|c|c|} \hline 
+            	effectlevel & 1 & 2 & 3  \\ \hline 
+                閾値 & 16bpm以上 & 14bpm以上 & 12bpm以上 \\ \hline
+            \end{tabular}
+    \end{center}
+\end{table}
+
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/effectlevel.png}
-    \caption{閾値の判別}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{images/chapter3/level.png}
+    \includegraphics[width=14cm]{images/chapter3/level.png}
     \caption{心拍数上昇箇所の抽出処理をした結果}
 \end{figure}
 
@@ -165,7 +177,7 @@ effectlevelで表示するエフェクトを決定する．effectlevelは表�
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{images/chapter3/system.png}
+    \includegraphics[width=15cm]{images/chapter3/system.png}
     \caption{心拍データの概要図}
 \end{figure}
 
